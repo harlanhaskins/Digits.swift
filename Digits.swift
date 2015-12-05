@@ -1,5 +1,5 @@
-extension Int {
-    func digits(radix: Int) -> [Int] {
+public extension Int {
+    public func digits(radix: Int) -> [Int] {
         var worker = self
         var digits = [Int]()
         while worker > 0 {
@@ -11,8 +11,8 @@ extension Int {
     }
 }
 
-extension Array where Element: protocol<IntegerArithmeticType, IntegerLiteralConvertible> {
-    func unDigits(radix: Element) -> Element {
+public extension Array where Element: protocol<IntegerArithmeticType, IntegerLiteralConvertible> {
+    public func unDigits(radix: Element) -> Element {
         if self.isEmpty {
             return 0
         } else {
